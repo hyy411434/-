@@ -1,11 +1,13 @@
-#include "armwindow.h"
-#include <QApplication>
+#include <QCoreApplication>
+
+#include "tcpserver.h"
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    ArmWindow w;
-    w.show();
+    QCoreApplication a(argc, argv);
+
+    TcpServer *sever = new TcpServer();
+
 
     return a.exec();
 }
