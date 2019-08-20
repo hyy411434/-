@@ -1,13 +1,11 @@
-#include <QCoreApplication>
-
-#include "tcpserver.h"
+#include "pcwindow.h"
+#include <QApplication>
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication a(argc, argv);
-
-    TcpServer *sever = new TcpServer();
-
+    QApplication a(argc, argv);
+    pcWindow w;
+    w.show();
 
     return a.exec();
 }
